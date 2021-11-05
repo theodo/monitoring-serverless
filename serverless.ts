@@ -2,6 +2,7 @@ import type { AWS } from "@serverless/typescript";
 
 import hello from "@functions/hello";
 import generate4XX from "@functions/generate4XX";
+import generate5XX from "@functions/generate5XX";
 
 const serverlessConfiguration: AWS = {
   service: "monitoring-backend",
@@ -35,7 +36,7 @@ const serverlessConfiguration: AWS = {
     },
     lambdaHashingVersion: "20201221",
   },
-  functions: { hello, generate4XX },
+  functions: { hello, generate4XX, generate5XX },
 };
 
 module.exports = serverlessConfiguration;
